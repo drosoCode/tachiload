@@ -5,6 +5,9 @@ import shutil
 
 extensions = {}
 
+basePath = "../app/src/main/kotlin/tachiload/extension"
+dataPath = "../app/src/main/resources/extensions.json"
+
 
 def parseGradle(path: str) -> dict:
     data = {"libVersion": None, "extVersionCode": None, "extClass": None}
@@ -30,10 +33,10 @@ def findParenthesisEnd(startPos: int, data: str) -> int:
 
 def fixKotlin(lang: str, ext: str):
     path = os.path.join(
-        lang, ext, "src", "eu", "kanade", "tachiyomi", "extension", lang, ext
+        basePath, lang, ext, "src", "eu", "kanade", "tachiyomi", "extension", lang, ext
     )
     if not os.path.exists(path):
-        shutil.rmtree(os.path.join(lang, ext))
+        shutil.rmtree(os.path.join(basePath, lang, ext))
         return
 
     for f in os.listdir(path):
@@ -114,18 +117,19 @@ def fixKotlin(lang: str, ext: str):
     # create a dict with all extensions data
     if lang not in extensions:
         extensions[lang] = []
-    dat = parseGradle(os.path.join(lang, ext, "build.gradle"))
+    dat = parseGradle(os.path.join(basePath, lang, ext, "build.gradle"))
     dat.update({"name": ext})
     extensions[lang].append(dat)
 
 
 # process
-for lang in os.listdir("./"):
-    if os.path.isdir(lang):
-        for ext in os.listdir(lang):
-            if os.path.isdir(os.path.join(lang, ext)):
+for lang in os.listdir(basePath):
+    p = os.path.join(basePath, lang)
+    if os.path.isdir(p):
+        for ext in os.listdir(p):
+            if os.path.isdir(os.path.join(p, ext)):
                 fixKotlin(lang, ext)
 
 # save file with list of extensions
-with open("extensions.json", "w") as f:
+with open(dataPath, "w") as f:
     json.dump(extensions, f)

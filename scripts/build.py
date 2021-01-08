@@ -4,9 +4,11 @@ import json
 import shutil
 
 basePath = "/app/app/src/main/kotlin/tachiload/extension"
+dataPath = "../app/src/main/resources/extensions.json"
+buildCmd = "cd ../ && ./gradlew build"
 
 extensions_error = {}
-proc = subprocess.Popen(["/app/gradlew", "build"], stderr=subprocess.PIPE)
+proc = subprocess.Popen(buildCmd, stderr=subprocess.PIPE, shell=True)
 while True:
     line = proc.stderr.readline()
     if line:
@@ -23,7 +25,7 @@ while True:
     else:
         break
 
-with open(os.path.join(basePath, "extensions.json"), "r") as f:
+with open(dataPath, "r") as f:
     ext_data = json.load(f)
 
 for lang in extensions_error:
@@ -35,7 +37,7 @@ for lang in extensions_error:
         else:
             i += 1
 
-with open(os.path.join(basePath, "extensions.json"), "w") as f:
+with open(dataPath, "w") as f:
     json.dump(ext_data, f)
 
-os.system("/app/gradlew build")
+os.system(buildCmd)
