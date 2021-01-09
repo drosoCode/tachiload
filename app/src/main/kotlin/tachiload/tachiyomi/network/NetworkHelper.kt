@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit
 
 class NetworkHelper() {
 
-    private val cacheDirPath: String = "__cache";
+    private val cacheDirPath: String = ".cache";
 
     private val cacheDir = File(cacheDirPath, "network_cache")
 

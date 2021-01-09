@@ -25,6 +25,7 @@ hs_err_pid*
 .gradle
 build
 __cache
+.cache
 app/src/main/kotlin/tachiload/extension
 !gradle-wrapper.jar
 
