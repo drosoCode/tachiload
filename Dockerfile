@@ -11,6 +11,9 @@ RUN git clone --depth 1 https://github.com/tachiyomiorg/tachiyomi-extensions /tm
     && python3 build.py
 
 FROM openjdk:8-jre-slim
-RUN mkdir /app
+RUN apt-get update && apt-get install -y python3 python3-pip whiptail \
+    && pip3 install whiptail-dialogs \
+    && mkdir /app
+COPY --from=builder /app/scripts/configure.py /app/configure.py
 COPY --from=builder /app/app/build/libs/app-all.jar /app/app.jar
 CMD ["java", "-jar", "/app/app.jar"]

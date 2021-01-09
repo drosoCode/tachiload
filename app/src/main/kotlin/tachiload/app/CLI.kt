@@ -19,37 +19,32 @@ class CLI(private val configPath: String, private val args: Array<String>) {
     )
 
     init {
-        if (this.args[0] == "--extList" && this.args.size == 1) {
-            this.extList()
+        if (this.args[0] == "--extensions" && this.args.size == 1) {
+            print(this.extList())
         } else if(this.args[0] == "--search" && this.args.size >= 4) {
-            this.search()
+            print(this.search())
         } else {
-            println("Error")
+            print("Error")
         }
     }
 
-    private fun extList() {
-        println(this::class.java.classLoader.getResource("extensions.json").readText())
+    private fun extList(): String {
+        return this::class.java.classLoader.getResource("extensions.json").readText()
     }
 
-    private fun search() {
+    private fun search(): String {
         //args: --search [name] [lang_ext1] [name_ext1] [lang_ext2] [name_ext2]
         var lst = mutableListOf<ConfigItem>()
         for (i in 2 until args.size step 2)
         {
-            val ext = Helpers.loadExtension(this.index, this.args[i], this.args[i+1])
-            if (ext == null) {
-                println("Error")
-                return
-            }
+            val ext = Helpers.loadExtension(this.index, this.args[i], this.args[i+1]) ?: return "Error"
 
             var page = 1
             var nextPage = true
             while(nextPage) {
                 val value = ext.fetchSearchManga(page, args[1], FilterList()).toBlocking().first()
-                println(value)
                 for (m in value.mangas) {
-                    lst.add(ConfigItem(this.args[i], this.args[i+1], m as SMangaImpl))
+                    lst.add(ConfigItem(this.args[i+1], this.args[i], m as SMangaImpl))
                 }
                 if(value.hasNextPage)
                     page++
@@ -57,7 +52,7 @@ class CLI(private val configPath: String, private val args: Array<String>) {
                     nextPage = false
             }
         }
-        println(Gson().toJson(lst))
+        return Gson().toJson(lst)
     }
 
 }
