@@ -1,11 +1,13 @@
 package tachiload.app
 
 fun main(args: Array<String>) {
-    println("========================================== Tachiload ==========================================")
-
     val configPath = "/app/config.json"
     val downloadPath = "/app/downloads"
 
-    val downloader = Download(configPath, downloadPath)
-    downloader.update()
+    if (args.isNotEmpty()) {
+        CLI(configPath, args)
+    } else {
+        println("========================================== Tachiload ==========================================")
+        Download(configPath, downloadPath).update()
+    }
 }

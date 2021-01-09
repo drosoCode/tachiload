@@ -2,7 +2,6 @@ package tachiload.app
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import tachiload.tachiyomi.source.SourceFactory
 import tachiload.tachiyomi.source.model.SChapter
 import tachiload.tachiyomi.source.model.SManga
 import tachiload.tachiyomi.source.online.HttpSource
@@ -13,28 +12,8 @@ import java.nio.file.Paths
 
 class Download(private val configPath: String, private val downloadPath: String) {
 
-    private var index: Map<String, List<ExtensionsIndex>> = Gson().fromJson(
-        this::class.java.classLoader.getResource("extensions.json").readText(),
-        object: TypeToken<Map<String, List<ExtensionsIndex>>>() {}.type
-    )
-
-    private var items: List<ConfigItem> = Gson().fromJson(
-        Files.newBufferedReader(Paths.get(configPath)),
-        object: TypeToken<List<ConfigItem>>() {}.type
-    )
-
-    private fun loadExtension(lang: String, ext: String): HttpSource? {
-        val extClass = this.index[lang]!!.find { it.name == ext }?.extClass
-        val instance = this.javaClass.classLoader.loadClass("tachiload.extension.$lang.$ext.src.eu.kanade.tachiyomi.extension.$lang.$ext$extClass")
-            .getDeclaredConstructor()
-            .newInstance()
-
-        when (instance) {
-            is HttpSource -> return instance
-            is SourceFactory -> return instance.createSources()[0] as HttpSource
-        }
-        return null
-    }
+    private var index = Helpers.loadIndex()
+    private var items = Helpers.loadItems(configPath)
 
     private fun downloadChapter(extension: HttpSource, chapter: SChapter, title: String, number: Int) {
         println("  Downloading chapter $number")
@@ -96,7 +75,7 @@ class Download(private val configPath: String, private val downloadPath: String)
         {
             println("Updating " + manga.data.title + " ...")
             this.downloadNewChapters(
-                loadExtension(manga.language, manga.extension),
+                Helpers.loadExtension(this.index, manga.language, manga.extension),
                 manga.data,
                 this.getLatestChapter(manga.data.title)
             )
