@@ -12,6 +12,7 @@ plugins {
 repositories {
     google()
     maven { url = uri("https://jitpack.io") }
+    maven { url = uri("https://kotlin.bintray.com/kotlinx") }
     mavenCentral()
     jcenter()
 }
@@ -63,6 +64,12 @@ dependencies {
 
     // CRON
     implementation("it.sauronsoftware.cron4j:cron4j:2.2.5")
+
+    // Args Parser
+    implementation("org.jetbrains.kotlinx:kotlinx-cli:0.3")
+
+    // Alternative to Webview for cloudflare interceptor
+    implementation("com.microsoft.playwright:playwright:0.171.0")
 }
 
 application {

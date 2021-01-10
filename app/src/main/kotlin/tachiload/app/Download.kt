@@ -1,16 +1,17 @@
 package tachiload.app
 
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import tachiload.tachiyomi.source.model.SChapter
 import tachiload.tachiyomi.source.model.SManga
 import tachiload.tachiyomi.source.online.HttpSource
 import java.io.File
 import java.io.FileOutputStream
-import java.nio.file.Files
-import java.nio.file.Paths
+import okhttp3.OkHttpClient
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 
-class Download(private val configPath: String, private val downloadPath: String) {
+
+class Download(private val configPath: String, private val downloadPath: String, private val webhook: String?) {
 
     private var index = Helpers.loadIndex()
     private var items = Helpers.loadItems(configPath)
@@ -41,14 +42,16 @@ class Download(private val configPath: String, private val downloadPath: String)
             if(latestChapter < 0)
             {
                 for ((i, c) in chapters.withIndex()) {
-                    this.downloadChapter(extension, c, manga.title, i+1)
+                    this.downloadChapter(extension, c, manga.title, chapters.size-i)
                 }
+                notify("Downloaded "+chapters.size+" new chapters for "+manga.title)
             }
             else if (chapters.size - latestChapter > 0)
             {
                 for (i in 0 until chapters.size-latestChapter) {
-                    this.downloadChapter(extension, chapters[i], manga.title, latestChapter+i+1)
+                    this.downloadChapter(extension, chapters[i], manga.title, chapters.size-i)
                 }
+                notify("Downloaded "+(chapters.size - latestChapter) +" new chapters ["+ (latestChapter+1) +"-"+ chapters.size +"] for "+manga.title)
             }
         }
     }
@@ -66,6 +69,18 @@ class Download(private val configPath: String, private val downloadPath: String)
                     i = a.toInt()
             }
             i
+        }
+    }
+
+    private fun notify(text: String)
+    {
+        if(this.webhook != null) {
+            OkHttpClient().newCall(
+                Request.Builder()
+                    .url(this.webhook)
+                    .post("{\"content\": \"$text\"}".toRequestBody("application/json; charset=utf-8".toMediaTypeOrNull()))
+                    .build()
+            ).execute()
         }
     }
 

@@ -16,4 +16,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends python3 python3
     && mkdir /app
 COPY --from=builder /app/scripts/configure.py /app/configure.py
 COPY --from=builder /app/app/build/libs/app-all.jar /app/app.jar
-CMD ["java", "-jar", "/app/app.jar", "--cron", "0 */6 * * *"]
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+CMD ""

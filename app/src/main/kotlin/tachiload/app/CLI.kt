@@ -1,22 +1,12 @@
 package tachiload.app
 
 import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import java.nio.file.Files
-import java.nio.file.Paths
 import tachiload.tachiyomi.source.model.FilterList
 import tachiload.tachiyomi.source.model.SMangaImpl
 
 
 class CLI(private val configPath: String, private val args: Array<String>) {
-    private var items: List<ConfigItem> = Gson().fromJson(
-        Files.newBufferedReader(Paths.get(configPath)),
-        object: TypeToken<List<ConfigItem>>() {}.type
-    )
-    private var index: Map<String, List<ExtensionsIndex>> = Gson().fromJson(
-        this::class.java.classLoader.getResource("extensions.json").readText(),
-        object: TypeToken<Map<String, List<ExtensionsIndex>>>() {}.type
-    )
+    private var index = Helpers.loadIndex()
 
     init {
         if (this.args[0] == "--extensions" && this.args.size == 1) {

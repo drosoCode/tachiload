@@ -1,8 +1,9 @@
 version: "3"
 services:
   tachiload:
+    command: --cron "0 */6 * * *"
     build: .
     restart: unless-stopped
     volumes:
       - /app/docker/data/tachiload/config.json:/app/config.json
-      - /app/docker/data/tachiload/data:/app/downloads
+      - /nas/Mangas:/app/downloads
