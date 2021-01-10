@@ -1,0 +1,8 @@
+version: "3"
+services:
+  tachiload:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - /app/docker/data/tachiload/config.json:/app/config.json
+      - /app/docker/data/tachiload/data:/app/downloads
