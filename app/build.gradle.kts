@@ -12,6 +12,7 @@ plugins {
 repositories {
     google()
     maven { url = uri("https://jitpack.io") }
+    mavenCentral()
     jcenter()
 }
 
@@ -59,6 +60,9 @@ dependencies {
 
     // JavaScript engine
     implementation("com.squareup.duktape:duktape-android:1.3.0")
+
+    // CRON
+    implementation("it.sauronsoftware.cron4j:cron4j:2.2.5")
 }
 
 application {
