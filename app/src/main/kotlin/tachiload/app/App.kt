@@ -5,8 +5,8 @@ import it.sauronsoftware.cron4j.Scheduler
 import java.time.LocalDateTime
 
 fun main(args: Array<String>) {
-    val configPath = "/app/config.json"
-    val downloadPath = "/app/downloads"
+    val configPath = "./config.json"
+    val downloadPath = "./downloads"
 
     if (args.isNotEmpty()) {
         if(args[0] == "--cron" && args.size == 2)
