@@ -1,242 +1,242 @@
 # Tachiload Compatibility List
-## Tested with: [tachiyomi-extensions](https://github.com/tachiyomiorg/tachiyomi-extensions/tree/a28d14fc698f9fa7cb230b68fe8823b012f739e1)
-|Language | Name | Compilable | Tested|
-|--------|------|------------|-------|
-| all | batoto | YES | UNTESTED |
-| all | ciayo | YES | UNTESTED |
-| all | comicake | YES | UNTESTED |
-| all | dragonball_multiverse | NO | UNTESTED |
-| all | ehentai | YES | UNTESTED |
-| all | elimangas | YES | UNTESTED |
-| all | eromuse | NO | UNTESTED |
-| all | fmreader | YES | UNTESTED |
-| all | foolslide | YES | UNTESTED |
-| all | genkan | NO | UNTESTED |
-| all | hitomi | YES | UNTESTED |
-| all | komga | YES | UNTESTED |
-| all | lanraragi | YES | UNTESTED |
-| all | madara | YES | UNTESTED |
-| all | mangabox | YES | UNTESTED |
-| all | mangadex | YES | UNTESTED |
-| all | mangadventure | YES | UNTESTED |
-| all | mangaplus | YES | UNTESTED |
-| all | mangatoon | YES | UNTESTED |
-| all | mmrcms | YES | UNTESTED |
-| all | myreadingmanga | YES | UNTESTED |
-| all | nhentai | YES | UNTESTED |
-| all | ninehentai | YES | UNTESTED |
-| all | ninemanga | YES | UNTESTED |
-| all | noisemanga | YES | UNTESTED |
-| all | paprika | YES | UNTESTED |
-| all | simplyhentai | YES | UNTESTED |
-| all | thelibraryofohara | YES | UNTESTED |
-| all | toomics | YES | UNTESTED |
-| all | webtoons | YES | WORKING |
-| all | wpcomics | YES | UNTESTED |
-| all | wpmangareader | YES | UNTESTED |
-| all | wpmangastream | YES | UNTESTED |
-| all | zbulu | YES | UNTESTED |
-| ar | andromedascans | YES | UNTESTED |
-| ar | gmanga | YES | UNTESTED |
-| ar | mangaae | NO | UNTESTED |
-| ar | mangalink | YES | UNTESTED |
-| ar | mangazen | YES | UNTESTED |
-| ar | shqqaa | YES | UNTESTED |
-| de | mangatube | YES | UNTESTED |
-| de | wiemanga | YES | UNTESTED |
-| en | boommanga | NO | UNTESTED |
-| en | clonemanga | YES | UNTESTED |
-| en | comicastle | YES | UNTESTED |
-| en | comicextra | YES | UNTESTED |
-| en | comicpunch | YES | UNTESTED |
-| en | dilbert | YES | UNTESTED |
-| en | doujins | YES | UNTESTED |
-| en | dynasty | YES | UNTESTED |
-| en | earlymanga | YES | UNTESTED |
-| en | eggporncomics | YES | UNTESTED |
-| en | existentialcomics | YES | UNTESTED |
-| en | explosm | YES | UNTESTED |
-| en | gunnerkriggcourt | YES | UNTESTED |
-| en | guya | YES | UNTESTED |
-| en | hbrowse | YES | UNTESTED |
-| en | hentai2read | YES | UNTESTED |
-| en | hentaifox | YES | UNTESTED |
-| en | hiveworks | YES | UNTESTED |
-| en | honkaiimpact3 | NO | UNTESTED |
-| en | keenspot | YES | UNTESTED |
-| en | killsixbilliondemons | YES | UNTESTED |
-| en | latisbooks | YES | UNTESTED |
-| en | lemonfont | YES | UNTESTED |
-| en | madokami | YES | UNTESTED |
-| en | manga1s | YES | UNTESTED |
-| en | mangadog | YES | UNTESTED |
-| en | mangadoom | YES | UNTESTED |
-| en | mangaeden | YES | UNTESTED |
-| en | mangafast | YES | UNTESTED |
-| en | mangafreak | YES | UNTESTED |
-| en | mangahasu | YES | UNTESTED |
-| en | mangahere | YES | UNTESTED |
-| en | mangahub | YES | UNTESTED |
-| en | mangajar | YES | UNTESTED |
-| en | mangakatana | YES | UNTESTED |
-| en | mangalife | YES | UNTESTED |
-| en | mangalinkz | YES | UNTESTED |
-| en | mangamainac | YES | UNTESTED |
-| en | mangamutiny | YES | UNTESTED |
-| en | mangaowl | YES | UNTESTED |
-| en | mangapark | YES | UNTESTED |
-| en | mangapill | YES | UNTESTED |
-| en | mangareader | YES | UNTESTED |
-| en | mangarockes | YES | UNTESTED |
-| en | mangasail | YES | UNTESTED |
-| en | mangasee | YES | WORKING |
-| en | mangatown | YES | UNTESTED |
-| en | manhwamanga | YES | UNTESTED |
-| en | manhwatime | YES | UNTESTED |
-| en | manmanga | YES | UNTESTED |
-| en | merakiscans | YES | UNTESTED |
-| en | myhentaicomics | YES | UNTESTED |
-| en | myhentaigallery | YES | UNTESTED |
-| en | naniscans | YES | UNTESTED |
-| en | nhentaicom | NO | UNTESTED |
-| en | nineanime | YES | UNTESTED |
-| en | nuxscans | YES | UNTESTED |
-| en | oglaf | YES | UNTESTED |
-| en | patchfriday | YES | UNTESTED |
-| en | perveden | YES | UNTESTED |
-| en | pururin | YES | UNTESTED |
-| en | questionablecontent | YES | UNTESTED |
-| en | readcomiconline | YES | UNTESTED |
-| en | readjump | YES | UNTESTED |
-| en | readm | YES | UNTESTED |
-| en | readmangatoday | YES | UNTESTED |
-| en | readmanhwa | YES | UNTESTED |
-| en | schlockmercenary | YES | UNTESTED |
-| en | silentmangaaudition | YES | UNTESTED |
-| en | sleepypandascans | YES | UNTESTED |
-| en | swordscomic | YES | UNTESTED |
-| en | tapastic | YES | UNTESTED |
-| en | tcbscans | YES | UNTESTED |
-| en | thepropertyofhate | YES | UNTESTED |
-| en | timelessleaf | YES | UNTESTED |
-| en | tsumino | YES | UNTESTED |
-| en | vgperson | YES | UNTESTED |
-| en | vizshonenjump | YES | UNTESTED |
-| en | webcomics | YES | UNTESTED |
-| en | webnovel | YES | UNTESTED |
-| en | wutopia | YES | UNTESTED |
-| en | xkcd | YES | UNTESTED |
-| es | doujinyang | YES | UNTESTED |
-| es | heavenmanga | YES | UNTESTED |
-| es | ikuhentai | YES | UNTESTED |
-| es | inmanga | YES | UNTESTED |
-| es | kumanga | YES | UNTESTED |
-| es | lectormanga | YES | UNTESTED |
-| es | mangamx | YES | UNTESTED |
-| es | tmohentai | YES | UNTESTED |
-| es | tumangaonline | YES | UNTESTED |
-| es | vcpvmp | YES | UNTESTED |
-| fr | japscan | YES | UNTESTED |
-| fr | kangaryu | YES | UNTESTED |
-| fr | lirescan | YES | UNTESTED |
-| fr | mangakawaii | YES | UNTESTED |
-| fr | scantrad | YES | UNTESTED |
-| fr | scantradunion | YES | UNTESTED |
-| id | KomikFan | NO | UNTESTED |
-| id | bacakomik | YES | UNTESTED |
-| id | bacamanga | YES | UNTESTED |
-| id | comicfx | YES | UNTESTED |
-| id | komikcast | YES | UNTESTED |
-| id | komikindo | YES | UNTESTED |
-| id | komiku | YES | UNTESTED |
-| id | maidmanga | YES | UNTESTED |
-| id | mangaindo | YES | UNTESTED |
-| id | mangaku | YES | UNTESTED |
-| id | mangayu | NO | UNTESTED |
-| id | manhuaid | YES | UNTESTED |
-| id | neumanga | YES | UNTESTED |
-| id | nyanfm | YES | UNTESTED |
-| it | hentaifantasy | YES | UNTESTED |
-| it | mangaeden | YES | UNTESTED |
-| it | mangaworld | YES | UNTESTED |
-| it | novelleleggere | YES | UNTESTED |
-| it | perveden | YES | UNTESTED |
-| ja | mangaraw | YES | UNTESTED |
-| ja | nikkangecchan | YES | UNTESTED |
-| ja | rawdevart | YES | UNTESTED |
-| ja | senmanga | YES | UNTESTED |
-| ja | shonenjumpplus | YES | UNTESTED |
-| ko | jmana | YES | UNTESTED |
-| ko | navercomic | YES | UNTESTED |
-| ko | newtoki | YES | UNTESTED |
-| ko | toonkor | YES | UNTESTED |
-| pt | bruttal | NO | UNTESTED |
-| pt | centraldemangas | NO | UNTESTED |
-| pt | goldenmangas | YES | UNTESTED |
-| pt | hipercool | NO | UNTESTED |
-| pt | hqdragon | YES | UNTESTED |
-| pt | hqnow | YES | UNTESTED |
-| pt | mangahost | YES | UNTESTED |
-| pt | mangasproject | NO | UNTESTED |
-| pt | mangayabu | YES | UNTESTED |
-| pt | mundohentai | YES | UNTESTED |
-| pt | mundomangakun | YES | UNTESTED |
-| pt | saikaiscan | YES | UNTESTED |
-| pt | socialcomics | YES | UNTESTED |
-| pt | supermangas | NO | UNTESTED |
-| pt | taosect | YES | UNTESTED |
-| pt | tsukimangas | NO | UNTESTED |
-| pt | unionmangas | YES | UNTESTED |
-| pt | yesmangas | YES | UNTESTED |
-| pt | zinnes | YES | UNTESTED |
-| ru | acomics | YES | UNTESTED |
-| ru | allhentai | NO | UNTESTED |
-| ru | anibe | YES | UNTESTED |
-| ru | comx | NO | UNTESTED |
-| ru | desu | YES | UNTESTED |
-| ru | henchan | YES | UNTESTED |
-| ru | libmanga | YES | UNTESTED |
-| ru | mangachan | NO | UNTESTED |
-| ru | mangaclub | YES | UNTESTED |
-| ru | mangahub | NO | UNTESTED |
-| ru | mangaonlinebiz | YES | UNTESTED |
-| ru | mintmanga | NO | UNTESTED |
-| ru | nudemoon | YES | UNTESTED |
-| ru | onlinecomics | YES | UNTESTED |
-| ru | readmanga | NO | UNTESTED |
-| ru | remanga | YES | UNTESTED |
-| ru | risensteam | YES | UNTESTED |
-| ru | selfmanga | YES | UNTESTED |
-| ru | yaoichan | NO | UNTESTED |
-| th | nekopost | YES | UNTESTED |
-| tr | MangaDenizi | NO | UNTESTED |
-| tr | mangaship | NO | UNTESTED |
-| tr | serimanga | YES | UNTESTED |
-| vi | academyvn | YES | UNTESTED |
-| vi | blogtruyen | YES | UNTESTED |
-| vi | hentaivn | YES | UNTESTED |
-| vi | iutruyentranh | YES | UNTESTED |
-| vi | medoctruyentranh | YES | UNTESTED |
-| vi | ngonphong | YES | UNTESTED |
-| vi | truyenqq | YES | UNTESTED |
-| vi | truyentranhlh | YES | UNTESTED |
-| zh | bainianmanga | YES | UNTESTED |
-| zh | bh3 | YES | UNTESTED |
-| zh | comico | YES | UNTESTED |
-| zh | copymanga | YES | UNTESTED |
-| zh | dmzj | YES | UNTESTED |
-| zh | gufengmh | YES | UNTESTED |
-| zh | hanhankuman | NO | UNTESTED |
-| zh | jinmantiantang | YES | UNTESTED |
-| zh | kuaikanmanhua | YES | UNTESTED |
-| zh | manhuadb | YES | UNTESTED |
-| zh | manhuadui | YES | UNTESTED |
-| zh | manhuagui | YES | UNTESTED |
-| zh | manhuaren | YES | UNTESTED |
-| zh | onemanhua | YES | UNTESTED |
-| zh | pufei | YES | UNTESTED |
-| zh | qimiaomh | YES | UNTESTED |
-| zh | qiximh | YES | UNTESTED |
-| zh | tohomh123 | YES | UNTESTED |
-| zh | wnacg | YES | UNTESTED |
-| zh | wuqimanga | YES | UNTESTED |
+## Tested with this version: [tachiyomi-extensions](https://github.com/tachiyomiorg/tachiyomi-extensions/tree/a28d14fc698f9fa7cb230b68fe8823b012f739e1)
+|Language | Name | Depandancies | Compilation | Tests|
+|---------|------|--------------|-------------|------|
+| all | batoto | ✔️ | ❌ | ❌ |
+| all | ciayo | ✔️ | ✔️ | ❌ |
+| all | comicake | ✔️ | ❌ | ❌ |
+| all | dragonball_multiverse | ✔️ | ❌ | ❌ |
+| all | ehentai | ✔️ | ❌ | ❌ |
+| all | elimangas | ✔️ | ✔️ | ✔️ |
+| all | eromuse | ✔️ | ❌ | ❌ |
+| all | fmreader | ✔️ | ❌ | ❌ |
+| all | foolslide | ✔️ | ❌ | ❌ |
+| all | genkan | ✔️ | ❌ | ❌ |
+| all | hitomi | ✔️ | ❌ | ❌ |
+| all | komga | ✔️ | ❌ | ❌ |
+| all | lanraragi | ✔️ | ❌ | ❌ |
+| all | madara | ✔️ | ❌ | ❌ |
+| all | mangabox | ✔️ | ❌ | ❌ |
+| all | mangadex | ✔️ | ❌ | ❌ |
+| all | mangadventure | ✔️ | ❌ | ❌ |
+| all | mangaplus | ✔️ | ❌ | ❌ |
+| all | mangatoon | ✔️ | ✔️ | ✔️ |
+| all | mmrcms | ✔️ | ❌ | ❌ |
+| all | myreadingmanga | ✔️ | ❌ | ❌ |
+| all | nhentai | ✔️ | ❌ | ❌ |
+| all | ninehentai | ✔️ | ✔️ | ✔️ |
+| all | ninemanga | ✔️ | ✔️ | ✔️ |
+| all | noisemanga | ✔️ | ✔️ | ✔️ |
+| all | paprika | ✔️ | ✔️ | ✔️ |
+| all | simplyhentai | ✔️ | ✔️ | ✔️ |
+| all | thelibraryofohara | ✔️ | ✔️ | ✔️ |
+| all | toomics | ✔️ | ✔️ | ✔️ |
+| all | webtoons | ✔️ | ✔️ | ✔️ |
+| all | wpcomics | ✔️ | ✔️ | ✔️ |
+| all | wpmangareader | ✔️ | ✔️ | ✔️ |
+| all | wpmangastream | ✔️ | ❌ | ❌ |
+| all | zbulu | ✔️ | ✔️ | ✔️ |
+| ar | andromedascans | ✔️ | ✔️ | ✔️ |
+| ar | gmanga | ✔️ | ❌ | ❌ |
+| ar | mangaae | ✔️ | ❌ | ❌ |
+| ar | mangalink | ✔️ | ✔️ | ✔️ |
+| ar | mangazen | ✔️ | ✔️ | ❌ |
+| ar | shqqaa | ✔️ | ✔️ | ✔️ |
+| de | mangatube | ✔️ | ✔️ | ✔️ |
+| de | wiemanga | ✔️ | ✔️ | ✔️ |
+| en | boommanga | ❌ | ❌ | ❌ |
+| en | clonemanga | ✔️ | ✔️ | ✔️ |
+| en | comicastle | ✔️ | ✔️ | ✔️ |
+| en | comicextra | ✔️ | ✔️ | ✔️ |
+| en | comicpunch | ✔️ | ✔️ | ✔️ |
+| en | dilbert | ✔️ | ❌ | ❌ |
+| en | doujins | ✔️ | ❌ | ❌ |
+| en | dynasty | ✔️ | ❌ | ❌ |
+| en | earlymanga | ✔️ | ✔️ | ✔️ |
+| en | eggporncomics | ✔️ | ✔️ | ✔️ |
+| en | existentialcomics | ✔️ | ✔️ | ✔️ |
+| en | explosm | ✔️ | ✔️ | ✔️ |
+| en | gunnerkriggcourt | ✔️ | ✔️ | ✔️ |
+| en | guya | ✔️ | ❌ | ❌ |
+| en | hbrowse | ✔️ | ✔️ | ✔️ |
+| en | hentai2read | ✔️ | ❌ | ❌ |
+| en | hentaifox | ✔️ | ✔️ | ✔️ |
+| en | hiveworks | ✔️ | ❌ | ❌ |
+| en | honkaiimpact3 | ❌ | ❌ | ❌ |
+| en | keenspot | ✔️ | ✔️ | ❌ |
+| en | killsixbilliondemons | ✔️ | ✔️ | ❌ |
+| en | latisbooks | ✔️ | ✔️ | ✔️ |
+| en | lemonfont | ✔️ | ✔️ | ✔️ |
+| en | madokami | ✔️ | ❌ | ❌ |
+| en | manga1s | ✔️ | ✔️ | ✔️ |
+| en | mangadog | ✔️ | ❌ | ❌ |
+| en | mangadoom | ✔️ | ✔️ | ✔️ |
+| en | mangaeden | ✔️ | ✔️ | ✔️ |
+| en | mangafast | ✔️ | ✔️ | ✔️ |
+| en | mangafreak | ✔️ | ❌ | ❌ |
+| en | mangahasu | ✔️ | ❌ | ❌ |
+| en | mangahere | ✔️ | ❌ | ❌ |
+| en | mangahub | ✔️ | ✔️ | ✔️ |
+| en | mangajar | ✔️ | ✔️ | ✔️ |
+| en | mangakatana | ✔️ | ✔️ | ✔️ |
+| en | mangalife | ✔️ | ✔️ | ✔️ |
+| en | mangalinkz | ✔️ | ❌ | ❌ |
+| en | mangamainac | ✔️ | ✔️ | ❌ |
+| en | mangamutiny | ✔️ | ❌ | ❌ |
+| en | mangaowl | ✔️ | ✔️ | ✔️ |
+| en | mangapark | ✔️ | ❌ | ❌ |
+| en | mangapill | ✔️ | ✔️ | ✔️ |
+| en | mangareader | ✔️ | ✔️ | ❌ |
+| en | mangarockes | ✔️ | ✔️ | ✔️ |
+| en | mangasail | ✔️ | ✔️ | ✔️ |
+| en | mangasee | ✔️ | ✔️ | ✔️ |
+| en | mangatown | ✔️ | ✔️ | ✔️ |
+| en | manhwamanga | ✔️ | ✔️ | ✔️ |
+| en | manhwatime | ✔️ | ✔️ | ✔️ |
+| en | manmanga | ✔️ | ✔️ | ✔️ |
+| en | merakiscans | ✔️ | ✔️ | ✔️ |
+| en | myhentaicomics | ✔️ | ✔️ | ✔️ |
+| en | myhentaigallery | ✔️ | ❌ | ❌ |
+| en | naniscans | ✔️ | ❌ | ❌ |
+| en | nhentaicom | ❌ | ❌ | ❌ |
+| en | nineanime | ✔️ | ✔️ | ✔️ |
+| en | nuxscans | ✔️ | ✔️ | ✔️ |
+| en | oglaf | ✔️ | ✔️ | ✔️ |
+| en | patchfriday | ✔️ | ✔️ | ✔️ |
+| en | perveden | ✔️ | ✔️ | ✔️ |
+| en | pururin | ✔️ | ✔️ | ✔️ |
+| en | questionablecontent | ✔️ | ❌ | ❌ |
+| en | readcomiconline | ✔️ | ❌ | ❌ |
+| en | readjump | ✔️ | ✔️ | ❌ |
+| en | readm | ✔️ | ✔️ | ✔️ |
+| en | readmangatoday | ✔️ | ✔️ | ✔️ |
+| en | readmanhwa | ✔️ | ❌ | ❌ |
+| en | schlockmercenary | ✔️ | ✔️ | ✔️ |
+| en | silentmangaaudition | ✔️ | ✔️ | ✔️ |
+| en | sleepypandascans | ✔️ | ✔️ | ❌ |
+| en | swordscomic | ✔️ | ✔️ | ✔️ |
+| en | tapastic | ✔️ | ❌ | ❌ |
+| en | tcbscans | ✔️ | ✔️ | ✔️ |
+| en | thepropertyofhate | ✔️ | ✔️ | ❌ |
+| en | timelessleaf | ✔️ | ✔️ | ✔️ |
+| en | tsumino | ✔️ | ❌ | ❌ |
+| en | vgperson | ✔️ | ❌ | ❌ |
+| en | vizshonenjump | ✔️ | ❌ | ❌ |
+| en | webcomics | ✔️ | ✔️ | ✔️ |
+| en | webnovel | ✔️ | ✔️ | ✔️ |
+| en | wutopia | ✔️ | ❌ | ❌ |
+| en | xkcd | ✔️ | ✔️ | ✔️ |
+| es | doujinyang | ✔️ | ❌ | ❌ |
+| es | heavenmanga | ✔️ | ✔️ | ✔️ |
+| es | ikuhentai | ✔️ | ✔️ | ✔️ |
+| es | inmanga | ✔️ | ✔️ | ❌ |
+| es | kumanga | ✔️ | ✔️ | ✔️ |
+| es | lectormanga | ✔️ | ❌ | ❌ |
+| es | mangamx | ✔️ | ❌ | ❌ |
+| es | tmohentai | ✔️ | ❌ | ❌ |
+| es | tumangaonline | ✔️ | ❌ | ❌ |
+| es | vcpvmp | ✔️ | ✔️ | ✔️ |
+| fr | japscan | ✔️ | ❌ | ❌ |
+| fr | kangaryu | ✔️ | ✔️ | ✔️ |
+| fr | lirescan | ✔️ | ✔️ | ✔️ |
+| fr | mangakawaii | ✔️ | ❌ | ❌ |
+| fr | scantrad | ✔️ | ✔️ | ❌ |
+| fr | scantradunion | ✔️ | ✔️ | ✔️ |
+| id | KomikFan | ❌ | ❌ | ❌ |
+| id | bacakomik | ✔️ | ✔️ | ✔️ |
+| id | bacamanga | ✔️ | ✔️ | ✔️ |
+| id | comicfx | ✔️ | ✔️ | ✔️ |
+| id | komikcast | ✔️ | ✔️ | ❌ |
+| id | komikindo | ✔️ | ❌ | ❌ |
+| id | komiku | ✔️ | ✔️ | ❌ |
+| id | maidmanga | ✔️ | ✔️ | ✔️ |
+| id | mangaindo | ✔️ | ✔️ | ✔️ |
+| id | mangaku | ✔️ | ❌ | ❌ |
+| id | mangayu | ✔️ | ❌ | ❌ |
+| id | manhuaid | ✔️ | ✔️ | ✔️ |
+| id | neumanga | ✔️ | ✔️ | ❌ |
+| id | nyanfm | ✔️ | ✔️ | ✔️ |
+| it | hentaifantasy | ✔️ | ✔️ | ✔️ |
+| it | mangaeden | ✔️ | ✔️ | ✔️ |
+| it | mangaworld | ✔️ | ✔️ | ✔️ |
+| it | novelleleggere | ✔️ | ✔️ | ❌ |
+| it | perveden | ✔️ | ✔️ | ✔️ |
+| ja | mangaraw | ✔️ | ✔️ | ❌ |
+| ja | nikkangecchan | ✔️ | ✔️ | ✔️ |
+| ja | rawdevart | ✔️ | ✔️ | ✔️ |
+| ja | senmanga | ✔️ | ❌ | ❌ |
+| ja | shonenjumpplus | ✔️ | ❌ | ❌ |
+| ko | jmana | ✔️ | ❌ | ❌ |
+| ko | navercomic | ✔️ | ❌ | ❌ |
+| ko | newtoki | ✔️ | ❌ | ❌ |
+| ko | toonkor | ✔️ | ❌ | ❌ |
+| pt | bruttal | ✔️ | ❌ | ❌ |
+| pt | centraldemangas | ✔️ | ❌ | ❌ |
+| pt | goldenmangas | ✔️ | ✔️ | ❌ |
+| pt | hipercool | ✔️ | ❌ | ❌ |
+| pt | hqdragon | ✔️ | ✔️ | ✔️ |
+| pt | hqnow | ✔️ | ✔️ | ✔️ |
+| pt | mangahost | ✔️ | ✔️ | ❌ |
+| pt | mangasproject | ✔️ | ❌ | ❌ |
+| pt | mangayabu | ✔️ | ✔️ | ✔️ |
+| pt | mundohentai | ✔️ | ✔️ | ❌ |
+| pt | mundomangakun | ✔️ | ✔️ | ✔️ |
+| pt | saikaiscan | ✔️ | ✔️ | ✔️ |
+| pt | socialcomics | ✔️ | ❌ | ❌ |
+| pt | supermangas | ✔️ | ❌ | ❌ |
+| pt | taosect | ✔️ | ✔️ | ✔️ |
+| pt | tsukimangas | ✔️ | ❌ | ❌ |
+| pt | unionmangas | ✔️ | ❌ | ❌ |
+| pt | yesmangas | ✔️ | ✔️ | ✔️ |
+| pt | zinnes | ✔️ | ✔️ | ✔️ |
+| ru | acomics | ✔️ | ✔️ | ✔️ |
+| ru | allhentai | ✔️ | ❌ | ❌ |
+| ru | anibe | ✔️ | ✔️ | ❌ |
+| ru | comx | ✔️ | ❌ | ❌ |
+| ru | desu | ✔️ | ✔️ | ✔️ |
+| ru | henchan | ✔️ | ❌ | ❌ |
+| ru | libmanga | ✔️ | ❌ | ❌ |
+| ru | mangachan | ✔️ | ❌ | ❌ |
+| ru | mangaclub | ✔️ | ❌ | ❌ |
+| ru | mangahub | ✔️ | ❌ | ❌ |
+| ru | mangaonlinebiz | ✔️ | ✔️ | ✔️ |
+| ru | mintmanga | ✔️ | ❌ | ❌ |
+| ru | nudemoon | ✔️ | ✔️ | ✔️ |
+| ru | onlinecomics | ✔️ | ✔️ | ✔️ |
+| ru | readmanga | ✔️ | ❌ | ❌ |
+| ru | remanga | ✔️ | ❌ | ❌ |
+| ru | risensteam | ✔️ | ✔️ | ✔️ |
+| ru | selfmanga | ✔️ | ✔️ | ✔️ |
+| ru | yaoichan | ✔️ | ❌ | ❌ |
+| th | nekopost | ✔️ | ✔️ | ❌ |
+| tr | MangaDenizi | ❌ | ❌ | ❌ |
+| tr | mangaship | ✔️ | ❌ | ❌ |
+| tr | serimanga | ✔️ | ✔️ | ✔️ |
+| vi | academyvn | ✔️ | ✔️ | ✔️ |
+| vi | blogtruyen | ✔️ | ✔️ | ❌ |
+| vi | hentaivn | ✔️ | ✔️ | ✔️ |
+| vi | iutruyentranh | ✔️ | ❌ | ❌ |
+| vi | medoctruyentranh | ✔️ | ✔️ | ✔️ |
+| vi | ngonphong | ✔️ | ✔️ | ✔️ |
+| vi | truyenqq | ✔️ | ❌ | ❌ |
+| vi | truyentranhlh | ✔️ | ✔️ | ✔️ |
+| zh | bainianmanga | ✔️ | ✔️ | ✔️ |
+| zh | bh3 | ✔️ | ✔️ | ❌ |
+| zh | comico | ✔️ | ✔️ | ✔️ |
+| zh | copymanga | ✔️ | ❌ | ❌ |
+| zh | dmzj | ✔️ | ❌ | ❌ |
+| zh | gufengmh | ✔️ | ❌ | ❌ |
+| zh | hanhankuman | ✔️ | ❌ | ❌ |
+| zh | jinmantiantang | ✔️ | ❌ | ❌ |
+| zh | kuaikanmanhua | ✔️ | ✔️ | ✔️ |
+| zh | manhuadb | ✔️ | ✔️ | ✔️ |
+| zh | manhuadui | ✔️ | ❌ | ❌ |
+| zh | manhuagui | ✔️ | ❌ | ❌ |
+| zh | manhuaren | ✔️ | ❌ | ❌ |
+| zh | onemanhua | ✔️ | ❌ | ❌ |
+| zh | pufei | ✔️ | ❌ | ❌ |
+| zh | qimiaomh | ✔️ | ✔️ | ❌ |
+| zh | qiximh | ✔️ | ❌ | ❌ |
+| zh | tohomh123 | ✔️ | ✔️ | ❌ |
+| zh | wnacg | ✔️ | ✔️ | ✔️ |
+| zh | wuqimanga | ✔️ | ❌ | ❌ |

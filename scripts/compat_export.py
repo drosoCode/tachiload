@@ -5,21 +5,22 @@ import subprocess
 extensions = []
 
 repoPath = "/tmp/tachiyomi-extensions"
-basePath = "../app/src/main/kotlin/tachiload/extension"
+extPath = "../app/src/main/kotlin/tachiload/extension"
 
+
+langs = os.listdir(extPath)
 with open("compat.json", "r") as f:
     ext_data = json.load(f)
 
-ext_ok = []
-for lang in os.listdir(basePath):
-    p = os.path.join(basePath, lang)
-    if os.path.isdir(p):
-        for ext in os.listdir(p):
-            ext_ok.append([lang, ext])
+for i in range(len(ext_data)):
+    if ext_data[i][0] in langs and ext_data[i][1] in os.listdir(
+        os.path.join(extPath, ext_data[i][0])
+    ):
+        ext_data[i][4] = True
 
 
 compat_data = "# Tachiload Compatibility List\n"
-compat_data += "## Tested with: [tachiyomi-extensions](https://github.com/tachiyomiorg/tachiyomi-extensions/tree/"
+compat_data += "## Tested with this version: [tachiyomi-extensions](https://github.com/tachiyomiorg/tachiyomi-extensions/tree/"
 rev = (
     subprocess.Popen(
         "cd " + repoPath + " && git rev-parse HEAD", stdout=subprocess.PIPE, shell=True
@@ -29,14 +30,23 @@ rev = (
 )
 compat_data += rev[: len(rev) - 1] + ")\n"
 
-compat_data += "|Language | Name | Compilable | Tested|\n"
-compat_data += "|--------|------|------------|-------|\n"
+compat_data += "|Language | Name | Depandancies | Compilation | Tests|\n"
+compat_data += "|---------|------|--------------|-------------|------|\n"
 
 for e in ext_data:
-    if e in ext_ok:
-        compat_data += "| " + e[0] + " | " + e[1] + " | YES | UNTESTED |\n"
-    else:
-        compat_data += "| " + e[0] + " | " + e[1] + " | NO | UNTESTED |\n"
+    compat_data += (
+        "| "
+        + e[0]
+        + " | "
+        + e[1]
+        + " | "
+        + ("✔️" if e[2] else "❌")
+        + " | "
+        + ("✔️" if e[2] and e[3] else "❌")
+        + " | "
+        + ("✔️" if e[2] and e[3] and e[4] else "❌")
+        + " |\n"
+    )
 
-with open("COMPATIBILITY.md", "w") as f:
+with open("../COMPATIBILITY.md", "w") as f:
     f.write(compat_data)

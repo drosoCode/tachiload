@@ -9,7 +9,10 @@ RUN rm -rf /app/app/src/main/kotlin/tachiload/extension \
     && mv /tmp/tachiyomi-extensions/src/* /app/app/src/main/kotlin/tachiload/extension \
     && chmod +x /app/gradlew \
     && cd /app/scripts \
-    && python3 compat.py \
+    && python3 compat_init.py \
     && python3 prepare.py \
+    && python3 compat_deps.py \
     && python3 build.py \
+    && python3 compat_build.py \
+    && python3 test.py \
     && python3 compat_export.py
