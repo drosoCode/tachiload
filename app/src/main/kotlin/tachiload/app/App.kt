@@ -7,9 +7,9 @@ import kotlinx.cli.*
 
 fun main(args: Array<String>) {
 
-    if(args.isNotEmpty() && (args[0] == "--extensions" || args[0] == "--search"))
+    if(args.isNotEmpty() && (args[0] == "--extensions" || args[0] == "--search" || args[0] == "--download"))
     {
-        CLI("./config.json", args)
+        CLI("./config.json", "./downloads", args)
     }
     else
     {

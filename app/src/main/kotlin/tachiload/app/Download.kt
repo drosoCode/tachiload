@@ -11,10 +11,7 @@ import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
 
 
-class Download(private val configPath: String, private val downloadPath: String, private val webhook: String?) {
-
-    private var index = Helpers.loadIndex()
-    private var items = Helpers.loadItems(configPath)
+class Download(private val configPath: String, private val downloadPath: String, private val webhook: String?=null) {
 
     private fun downloadChapter(extension: HttpSource, chapter: SChapter, title: String, number: Int) {
         println("  Downloading chapter $number")
@@ -34,7 +31,7 @@ class Download(private val configPath: String, private val downloadPath: String,
         }
     }
 
-    private fun downloadNewChapters(extension: HttpSource?, manga: SManga, latestChapter: Int) {
+    fun downloadNewChapters(extension: HttpSource?, manga: SManga, latestChapter: Int) {
         if (extension == null)
             return
         println("  Found $latestChapter chapters")
@@ -56,7 +53,7 @@ class Download(private val configPath: String, private val downloadPath: String,
         }
     }
 
-    private fun getLatestChapter(title: String): Int
+    fun getLatestChapter(title: String): Int
     {
         val dir = File(this.downloadPath+"/"+title)
         return if (!dir.exists()) {
@@ -86,11 +83,14 @@ class Download(private val configPath: String, private val downloadPath: String,
 
     fun update()
     {
-        for (manga in this.items)
+        val index = Helpers.loadIndex()
+        val items = Helpers.loadItems(configPath)
+
+        for (manga in items)
         {
             println("Updating " + manga.data.title + " ...")
             this.downloadNewChapters(
-                Helpers.loadExtension(this.index, manga.language, manga.extension),
+                Helpers.loadExtension(index, manga.language, manga.extension),
                 manga.data,
                 this.getLatestChapter(manga.data.title)
             )

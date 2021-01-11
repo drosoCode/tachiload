@@ -19,5 +19,6 @@ This software is compatible with most of the extensions of [Tachiyomi](https://g
 | --downloadPath [path] | -dl | Path to the download directory (default: ./downloads) | --downloadPath "/app/downloads" |
 | --extensions | |  (DEV) return a json object of all available extensions | --extensions |
 | --search [name] [ext1_lang] [ext1_name] [ext2_lang] [ext2_name] | | (DEV) return a json list of results for a search | --search "solo leveling" "en" "mangasee" |
+| --download [json dict] | | (DEV) download the specified manga | --download '{"extension": "mangasee", "language": "en", "data": {"url": "/manga/Akame-Ga-Kiru", "title": "Akame ga Kiru!", "status": 0, "thumbnail_url": "https://cover.nep.li/cover/Akame-Ga-Kiru.jpg", "initialized": false}}' |
 
 Thanks to [ClementD64](https://github.com/ClementD64) for his help on this project
