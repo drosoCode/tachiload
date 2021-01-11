@@ -32,3 +32,4 @@ app/src/main/kotlin/tachiload/extension
 extensions.json
 config.json
 downloads/
+docker-compose.yml
