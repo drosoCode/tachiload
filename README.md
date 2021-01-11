@@ -6,7 +6,7 @@ This software is compatible with most of the extensions of [Tachiyomi](https://g
 
 ## Usage
  - set your config file path and your download path in the `docker-compose.yml` file
- - (optionnal) edit the crontab command in the `docker-compose.yml` file
+ - (optionnal) edit the environment variables (TACHILOAD_CRON, TACHILOAD_WEBHOOK, TACHILOAD_CONFIG, TACHILOAD_DOWNLOAD) in the `docker-compose.yml` file (they correspond to the cli args)
  - run `docker-compose build` to build the container and `docker-compose up -d` to run it
  - to use the configuration utility, run `docker-compose exec tachiload /app/configure.py` and restart the container to apply changes
 

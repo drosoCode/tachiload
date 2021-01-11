@@ -1,9 +1,11 @@
 version: "3"
 services:
   tachiload:
-    command: --cron "0 */6 * * *"
     build: .
     restart: unless-stopped
     volumes:
       - /app/docker/data/tachiload/config.json:/app/config.json
       - /nas/Mangas:/app/downloads
+    environment: 
+      TACHILOAD_CRON: "0 */6 * * *"
+      TACHILOAD_WEBHOOK: "https://discord.com/api/webhooks/797877638982270996/NqYp9u5bxthwmmCUUgs4a-5nAau82wGkPxY8pVqZVYiY9c80a-tiTKiB8uKL9yhTro0C"

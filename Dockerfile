@@ -14,7 +14,8 @@ FROM openjdk:8-jre-slim
 RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip whiptail \
     && pip3 install whiptail-dialogs \
     && mkdir /app
+COPY --from=builder /app/entrypoint.sh /app/entrypoint.sh
 COPY --from=builder /app/scripts/configure.py /app/configure.py
 COPY --from=builder /app/app/build/libs/app-all.jar /app/app.jar
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
-CMD ""
+RUN chmod +x /app/entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]
