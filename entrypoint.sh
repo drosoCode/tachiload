@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -A args
+args=()
 
 if [ ! -z "$TACHILOAD_WEBHOOK" ]; then
   args+=("--webhook" "$TACHILOAD_WEBHOOK")
