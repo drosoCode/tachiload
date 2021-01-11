@@ -17,5 +17,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends python3 python3
 COPY --from=builder /app/entrypoint.sh /app/entrypoint.sh
 COPY --from=builder /app/scripts/configure.py /app/configure.py
 COPY --from=builder /app/app/build/libs/app-all.jar /app/app.jar
-RUN chmod +x /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh /app/configure.py
 ENTRYPOINT ["/app/entrypoint.sh"]
