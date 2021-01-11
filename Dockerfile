@@ -16,8 +16,7 @@ FROM openjdk:8-jre-slim
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip whiptail \
-    && pip3 install whiptail-dialogs \
-    && mkdir /app
+    && pip3 install whiptail-dialogs
 
 COPY --from=builder /app/entrypoint.sh /app/entrypoint.sh
 COPY --from=builder /app/scripts/configure.py /app/configure.py
