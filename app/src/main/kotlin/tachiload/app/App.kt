@@ -5,6 +5,7 @@ import it.sauronsoftware.cron4j.Scheduler
 import java.time.LocalDateTime
 import kotlinx.cli.*
 
+
 fun main(args: Array<String>) {
 
     if(args.isNotEmpty() && (args[0] == "--extensions" || args[0] == "--search" || args[0] == "--download"))

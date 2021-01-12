@@ -59,9 +59,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
-    // JavaScript engine
-    implementation("com.squareup.duktape:duktape-android:1.3.0")
-
     // CRON
     implementation("it.sauronsoftware.cron4j:cron4j:2.2.5")
 

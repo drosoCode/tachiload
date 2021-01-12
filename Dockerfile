@@ -12,6 +12,7 @@ RUN git clone --depth 1 https://github.com/tachiyomiorg/tachiyomi-extensions /tm
 
 FROM openjdk:8-jre-slim
 RUN apt-get update && apt-get install -y --no-install-recommends python3 python3-pip whiptail \
+    libwoff1 libopus0 libwebp6 libwebpdemux2 libenchant1c2a libgudev-1.0-0 libsecret-1-0 libhyphen0 libgdk-pixbuf2.0-0 libegl1 libnotify4 libxslt1.1 libevent-2.1-6 libgles2 libvpx5 libxcomposite1 libatk1.0-0 libatk-bridge2.0-0 libepoxy0 libgtk-3-0 libharfbuzz-icu0 libnss3 libxss1 libasound2 fonts-noto-color-emoji libxtst6 libdbus-glib-1-2 libxt6 xvfb \
     && pip3 install whiptail-dialogs \
     && mkdir /app
 COPY --from=builder /app/entrypoint.sh /app/entrypoint.sh

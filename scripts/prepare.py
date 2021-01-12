@@ -46,10 +46,7 @@ def fixKotlin(lang: str, ext: str):
                 # if extension imports android libs, discard it
                 print(curFile)
                 data = f.read()
-                if (
-                    data.find("import android") != -1
-                    or data.find("import com.squareup.duktape") != -1
-                ):
+                if data.find("import android") != -1:
                     shutil.rmtree(path)
                     return
                 # fix package name
@@ -63,6 +60,11 @@ def fixKotlin(lang: str, ext: str):
                 )
                 # fix imports
                 data = data.replace("import eu.kanade", "import tachiload")
+                # replace ducktape by custom implementation
+                data = data.replace(
+                    "import com.squareup.duktape.Duktape",
+                    "import tachiload.tachiyomi.Duktape",
+                )
                 # fix old okhttp versions
                 data = data.replace("response.request().url()", "response.request.url")
                 data = data.replace("response.body()", "response.body")
@@ -109,6 +111,10 @@ def fixKotlin(lang: str, ext: str):
                     j = findParenthesisEnd(i, data)
                     data = data[:j] + ".toMediaType()" + data[j:]
                     i = data.find("MediaType.parse")
+                # replace override fun saveFromResponse(url: HttpUrl, cookies: MutableList<Cookie>) {} by override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {}
+                data = data.replace("override fun saveFromResponse(url: HttpUrl, cookies: MutableList<Cookie>) {}", "override fun saveFromResponse(url: HttpUrl, cookies: List<Cookie>) {}")
+
+                data = fixExtension(lang, ext, data)
 
             # persist data
             with open(curFile, "w") as f:
@@ -121,6 +127,16 @@ def fixKotlin(lang: str, ext: str):
     dat.update({"name": ext})
     extensions[lang].append(dat)
 
+
+def fixExtension(lang: str, ext: str, data: str):
+    #fixes specific to some extensions
+    #Mangahere
+    if lang == "en" and ext == "mangahere":
+        data = data.replace('urls.mapIndexed { index: Int, s: String -> Page(index, "", "https:$s") }', 'urls.mapIndexed { index, s -> Page(index, "", "https:$s") }')
+    elif lang == "all" and ext == "batoto":
+        data = data.replace('Pair("zu", "zu"),', 'Pair("zu", "zu")')
+
+    return data
 
 # process
 for lang in os.listdir(basePath):
