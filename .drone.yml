@@ -16,6 +16,7 @@ steps:
       - apt-get update && apt-get install -y python3 git libwoff1 libopus0 libwebp6 libwebpdemux2 libenchant1c2a libgudev-1.0-0 libsecret-1-0 libhyphen0 libgdk-pixbuf2.0-0 libegl1 libnotify4 libxslt1.1 libevent-2.1-6 libgles2 libvpx5 libxcomposite1 libatk1.0-0 libatk-bridge2.0-0 libepoxy0 libgtk-3-0 libharfbuzz-icu0 libnss3 libxss1 libasound2 fonts-noto-color-emoji libxtst6 libdbus-glib-1-2 libxt6 xvfb
       - git clone https://drosocode:$github_token@github.com/drosoCode/tachiload /app && git clone --depth 1 https://github.com/tachiyomiorg/tachiyomi-extensions /tmp/tachiyomi-extensions
       - mkdir -p /app/app/src/main/kotlin/tachiload/extension && mv /tmp/tachiyomi-extensions/src/* /app/app/src/main/kotlin/tachiload/extension
+      - chmod +x /app/gradlew
       - cd /app/scripts && python3 compat_init.py
       - cd /app/scripts && python3 prepare.py
       - cd /app/scripts && python3 compat_deps.py
@@ -68,6 +69,6 @@ trigger:
     - tag
 ---
 kind: signature
-hmac: 99f8df63276767a8f2ffddf23501bb352a938dc417ad3b4ef39187de1b288f8a
+hmac: ae15c0109791cb4ab64c75d393a6c792a13934fdec4b3eb83dfb25928cfa5737
 
 ...
