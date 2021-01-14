@@ -1,0 +1,73 @@
+---
+kind: pipeline
+type: docker
+name: tachiload
+
+clone:
+  disable: true
+
+steps:
+  - name: build
+    image: openjdk:8-jdk-buster
+    environment:
+      github_token:
+        from_secret: github_token
+    commands:
+      - apt-get update && apt-get install -y python3 git libwoff1 libopus0 libwebp6 libwebpdemux2 libenchant1c2a libgudev-1.0-0 libsecret-1-0 libhyphen0 libgdk-pixbuf2.0-0 libegl1 libnotify4 libxslt1.1 libevent-2.1-6 libgles2 libvpx5 libxcomposite1 libatk1.0-0 libatk-bridge2.0-0 libepoxy0 libgtk-3-0 libharfbuzz-icu0 libnss3 libxss1 libasound2 fonts-noto-color-emoji libxtst6 libdbus-glib-1-2 libxt6 xvfb
+      - git clone https://drosocode:$github_token@github.com/drosoCode/tachiload /app && git clone --depth 1 https://github.com/tachiyomiorg/tachiyomi-extensions /tmp/tachiyomi-extensions
+      - mkdir -p /app/app/src/main/kotlin/tachiload/extension && mv /tmp/tachiyomi-extensions/src/* /app/app/src/main/kotlin/tachiload/extension
+      - cd /app/scripts && python3 compat_init.py
+      - cd /app/scripts && python3 prepare.py
+      - cd /app/scripts && python3 compat_deps.py
+      - cd /app/scripts && python3 build.py
+      - cd /app/scripts && python3 compat_build.py
+      - cd /app/scripts && python3 test.py
+      - cd /app/scripts && python3 compat_export.py
+      - cd /app && git add COMPATIBILITY.md && git commit -m "[CI] Update COMPATIBILITY.md" && git push -u origin main
+      - mkdir /drone/src/release && cp /app/app/build/libs/app-all.jar /drone/src/release/tachiload.jar
+
+  - name: publish
+    image: debian:10-slim
+    environment:
+      GITHUB_TOKEN:
+        from_secret: github_token
+    commands:
+      - apt-get update && apt-get install -y git wget
+      - wget https://github.com/cli/cli/releases/download/v1.4.0/gh_1.4.0_linux_amd64.deb
+      - dpkg -i gh_1.4.0_linux_amd64.deb
+      - gh release create ${DRONE_TAG} /drone/src/release/tachiload.jar -R drosoCode/tachiload -n "Release of $(date +'%Y/%m/%d') version ${DRONE_TAG}" -t "Tachiload V. ${DRONE_TAG}"
+
+  - name: discord_notification
+    image: appleboy/drone-discord
+    when:
+      status:
+        - success
+        - failure
+    settings:
+      webhook_id: 
+        from_secret: webhook_id
+      webhook_token:
+        from_secret: webhook_token
+      message: >
+        {{#success build.status}}
+        ✅ Build #{{build.number}} of `{{repo.name}}` succeeded.
+        📝 Commit by {{commit.author}} on `{{commit.branch}}`:
+        ```
+        {{commit.message}}
+        ```
+        {{else}}
+        ❌ Build #{{build.number}} of `{{repo.name}}` failed.
+        📝 Commit by {{commit.author}} on `{{commit.branch}}`:
+        ```
+        {{commit.message}}
+        ```
+        {{/success}}
+
+trigger:
+  event:
+    - tag
+---
+kind: signature
+hmac: 99f8df63276767a8f2ffddf23501bb352a938dc417ad3b4ef39187de1b288f8a
+
+...
