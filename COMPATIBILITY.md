@@ -1,8 +1,8 @@
 # Tachiload Compatibility List
-## Tested with this version: [tachiyomi-extensions](https://github.com/tachiyomiorg/tachiyomi-extensions/tree/a28d14fc698f9fa7cb230b68fe8823b012f739e1)
+## Tested with this version: [tachiyomi-extensions](https://github.com/tachiyomiorg/tachiyomi-extensions/tree/f9ac810129590a3df771acef88dd754b90b7b73c)
 |Language | Name | Depandancies | Compilation | Tests|
 |---------|------|--------------|-------------|------|
-| all | batoto | ✔️ | ❌ | ❌ |
+| all | batoto | ✔️ | ✔️ | ✔️ |
 | all | ciayo | ✔️ | ✔️ | ❌ |
 | all | comicake | ✔️ | ❌ | ❌ |
 | all | dragonball_multiverse | ✔️ | ❌ | ❌ |
@@ -35,7 +35,7 @@
 | all | wpcomics | ✔️ | ✔️ | ✔️ |
 | all | wpmangareader | ✔️ | ✔️ | ✔️ |
 | all | wpmangastream | ✔️ | ❌ | ❌ |
-| all | zbulu | ✔️ | ✔️ | ✔️ |
+| all | zbulu | ✔️ | ❌ | ❌ |
 | ar | andromedascans | ✔️ | ✔️ | ✔️ |
 | ar | gmanga | ✔️ | ❌ | ❌ |
 | ar | mangaae | ✔️ | ❌ | ❌ |
@@ -75,7 +75,7 @@
 | en | mangafast | ✔️ | ✔️ | ✔️ |
 | en | mangafreak | ✔️ | ❌ | ❌ |
 | en | mangahasu | ✔️ | ❌ | ❌ |
-| en | mangahere | ✔️ | ❌ | ❌ |
+| en | mangahere | ✔️ | ✔️ | ✔️ |
 | en | mangahub | ✔️ | ✔️ | ✔️ |
 | en | mangajar | ✔️ | ✔️ | ✔️ |
 | en | mangakatana | ✔️ | ✔️ | ✔️ |
@@ -129,8 +129,8 @@
 | es | doujinyang | ✔️ | ❌ | ❌ |
 | es | heavenmanga | ✔️ | ✔️ | ✔️ |
 | es | ikuhentai | ✔️ | ✔️ | ✔️ |
-| es | inmanga | ✔️ | ✔️ | ❌ |
-| es | kumanga | ✔️ | ✔️ | ✔️ |
+| es | inmanga | ✔️ | ✔️ | ✔️ |
+| es | kumanga | ✔️ | ✔️ | ❌ |
 | es | lectormanga | ✔️ | ❌ | ❌ |
 | es | mangamx | ✔️ | ❌ | ❌ |
 | es | tmohentai | ✔️ | ❌ | ❌ |
@@ -150,7 +150,7 @@
 | id | komikindo | ✔️ | ❌ | ❌ |
 | id | komiku | ✔️ | ✔️ | ❌ |
 | id | maidmanga | ✔️ | ✔️ | ✔️ |
-| id | mangaindo | ✔️ | ✔️ | ✔️ |
+| id | mangaindo | ✔️ | ✔️ | ❌ |
 | id | mangaku | ✔️ | ❌ | ❌ |
 | id | mangayu | ✔️ | ❌ | ❌ |
 | id | manhuaid | ✔️ | ✔️ | ✔️ |
@@ -201,7 +201,7 @@
 | ru | mangahub | ✔️ | ❌ | ❌ |
 | ru | mangaonlinebiz | ✔️ | ✔️ | ✔️ |
 | ru | mintmanga | ✔️ | ❌ | ❌ |
-| ru | nudemoon | ✔️ | ✔️ | ✔️ |
+| ru | nudemoon | ✔️ | ✔️ | ❌ |
 | ru | onlinecomics | ✔️ | ✔️ | ✔️ |
 | ru | readmanga | ✔️ | ❌ | ❌ |
 | ru | remanga | ✔️ | ❌ | ❌ |
@@ -213,7 +213,7 @@
 | tr | mangaship | ✔️ | ❌ | ❌ |
 | tr | serimanga | ✔️ | ✔️ | ✔️ |
 | vi | academyvn | ✔️ | ✔️ | ✔️ |
-| vi | blogtruyen | ✔️ | ✔️ | ❌ |
+| vi | blogtruyen | ✔️ | ✔️ | ✔️ |
 | vi | hentaivn | ✔️ | ✔️ | ✔️ |
 | vi | iutruyentranh | ✔️ | ❌ | ❌ |
 | vi | medoctruyentranh | ✔️ | ✔️ | ✔️ |
