@@ -19,7 +19,7 @@ class NetworkHelper() {
 
     private val cacheSize = 5L * 1024 * 1024 // 5 MiB
 
-    private val cookieManager = CustomCookieJar()
+    val cookieManager = CustomCookieJar()
 
     val client by lazy {
         val builder = OkHttpClient.Builder()
@@ -61,9 +61,9 @@ class NetworkHelper() {
     }
 
     val cloudflareClient by lazy {
-        /*client.newBuilder()
+        client.newBuilder()
             .addInterceptor(CloudflareInterceptor())
-            .build()*/
+            .build()
         client
     }
 }

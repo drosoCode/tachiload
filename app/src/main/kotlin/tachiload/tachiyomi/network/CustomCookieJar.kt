@@ -26,4 +26,22 @@ class CustomCookieJar : CookieJar {
             )
         }.collect(Collectors.toList())
     }
+
+    fun get(url: HttpUrl): List<Cookie> {
+
+        // Remove expired Cookies
+        //storage.removeIf { cookie: Cookie -> cookie.expiresAt() < System.currentTimeMillis() }
+
+        // Only return matching Cookies
+        return storage.stream().filter { cookie: Cookie ->
+            cookie.matches(
+                url
+            )
+        }.collect(Collectors.toList())
+    }
+
+    fun remove(url: HttpUrl, cookieNames: List<String>? = null, maxAge: Int = -1) {
+        val urlString = url.toString()
+    }
+
 }
